@@ -1,0 +1,25 @@
+[package]
+version = "0.1.0"
+name = "rust_test"
+repository = "https://github.com/LiveViewTech/rust-test"
+authors = ["Cheng Su <chengsu6561@gmail.com>"]
+description = "Rust/wasm test for WebDev applicants"
+readme = "./README.md"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+seed = { git = "https://github.com/seed-rs/seed", rev = "0a538f0" }
+wasm-bindgen = "^0.2.67"
+serde = "1.0.115"
+ulid = {version = "0.4.0", features = ["serde"]}
+
+[profile.release]
+lto = true
+opt-level = 'z'
+codegen-units = 1
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Os']
