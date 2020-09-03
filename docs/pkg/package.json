@@ -1,0 +1,20 @@
+{
+  "name": "rust_test",
+  "collaborators": [
+    "Cheng Su <chengsu6561@gmail.com>"
+  ],
+  "description": "Rust/wasm test for WebDev applicants",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiveViewTech/rust-test"
+  },
+  "files": [
+    "package_bg.wasm",
+    "package.js",
+    "package.d.ts"
+  ],
+  "module": "package.js",
+  "types": "package.d.ts",
+  "sideEffects": false
+}
